@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { PathFindingContext } from "../context/PathFindingContext";
 
-export const usePathFindingContext = () => {
+export const usePathFinding = () => {
   const context = useContext(PathFindingContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error(
       "usePathFindingContext must be used within a PathFindingProvider"
     );

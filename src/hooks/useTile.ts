@@ -3,7 +3,7 @@ import { TileContext } from "../context/TileContext";
 
 export const useTileContext = () => {
   const context = useContext(TileContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error("useTileContext must be used within a TileProvider");
   }
   return context;
