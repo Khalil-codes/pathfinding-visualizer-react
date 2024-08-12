@@ -1,4 +1,4 @@
-import { Tile } from "./types";
+import { Maze, Speed, Tile } from "./types";
 
 export const MAX_ROWS = 39;
 export const MAX_COLS = 49;
@@ -26,3 +26,15 @@ export const END_TILE_CONFIG: Tile = {
   isTraversed: false,
   parent: null,
 };
+
+export const MAZE_OPTIONS: Array<{ name: string; value: Maze }> = [
+  { name: "No Maze", value: "NONE" },
+  { name: "Binary Tree", value: "BINARY_TREE" },
+  { name: "Recursive Division", value: "RECURSIVE_DIVISION" },
+];
+
+export const SPEED_OPTIONS: Array<{ name: string; value: Speed }> = [
+  { name: "Slow", value: 2 },
+  { name: "Medium", value: 1 },
+  { name: "Fast", value: 0.5 },
+];
